@@ -110,12 +110,12 @@
     min-height: 800px;
 }
 
-/* For non-featured projects, create a grid */
+/* For non-featured projects */
 .project-grid .project-card:not(.featured) {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: 1fr;  /* Changed from repeat(auto-fit) */
     gap: 2rem;
-    max-width: 800px;  /* Reduced from 1000px */
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -131,29 +131,41 @@
 
 /* Mobile Responsive Design */
 @media screen and (max-width: 768px) {
+    .project-grid {
+        width: 95%;
+        padding: 0;
+    }
+
     .project-card {
-        min-height: auto;  /* Allow height to be flexible on mobile */
+        min-height: auto;
         padding: 15px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .project-card.featured {
         min-height: auto;
+        max-width: 100%;
+    }
+
+    .project-grid .project-card:not(.featured) {
+        max-width: 100%;
     }
 
     .project-image {
-        height: 300px;  /* Smaller height for mobile */
+        height: 300px;
     }
 
     .project-card.featured .project-image {
-        height: 350px;  /* Slightly larger for featured, but still mobile-friendly */
+        height: 350px;
     }
 
     .carousel-container {
-        width: 100%;  /* Full width on mobile */
+        width: 100%;
     }
 
     .carousel-btn {
-        padding: 8px 12px;  /* Smaller buttons on mobile */
+        padding: 8px 12px;
         font-size: 14px;
     }
 
@@ -165,7 +177,6 @@
         right: 2%;
     }
 
-    /* Adjust text sizes for mobile */
     .project-card h3 {
         font-size: 1.5rem;
     }
@@ -183,11 +194,16 @@
 /* For very small screens */
 @media screen and (max-width: 480px) {
     .project-grid {
-        width: 95%;  /* Use more screen width on very small devices */
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .project-card {
+        padding: 10px;
     }
 
     .project-image {
-        height: 250px;  /* Even smaller height for very small screens */
+        height: 250px;
     }
 
     .project-card.featured .project-image {
@@ -197,6 +213,18 @@
     .carousel-btn {
         padding: 6px 10px;
         font-size: 12px;
+    }
+
+    .project-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-card h4 {
+        font-size: 1.1rem;
+    }
+
+    .project-card p {
+        font-size: 0.85rem;
     }
 }
 
