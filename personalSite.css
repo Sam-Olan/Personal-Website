@@ -295,46 +295,60 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    .mobile-nav-toggle {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        right: 1rem;
-        top: 1rem;
+    .content {
+        padding-top: 60px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: 100%;
+        overflow-x: hidden;  /* Prevent horizontal scrolling */
     }
 
-    .nav-links {
-        position: fixed;
-        inset: 0 0 0 30%;
-        background: rgba(26, 26, 26, 0.95);  /* Match navbar color */
-        padding: min(30vh, 10rem) 2em;
-        transform: translateX(100%);
-        transition: transform 350ms ease-out;
-        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
-        z-index: 999;  /* Below the toggle button */
+    section {
+        padding: 2rem 0;  /* Reduce padding on mobile */
+        width: 100%;
     }
 
-    .nav-links[data-visible="true"] {
-        transform: translateX(0%);
+    .nameTitle-content {
+        padding: 1rem;
     }
 
-    .nav-links ul {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        text-align: left;
+    .skills-grid {
+        padding: 0 1rem;
     }
 
-    /* Hamburger Animation */
-    .mobile-nav-toggle[aria-expanded="true"] .hamburger span:first-child {
-        transform: rotate(45deg) translate(6px, 6px);
+    .contact-links {
+        padding: 0 1rem;
     }
 
-    .mobile-nav-toggle[aria-expanded="true"] .hamburger span:nth-child(2) {
-        opacity: 0;
+    /* Adjust navbar padding */
+    .navbar {
+        padding: 0 1rem;
     }
 
-    .mobile-nav-toggle[aria-expanded="true"] .hamburger span:last-child {
-        transform: rotate(-45deg) translate(6px, -6px);
+    /* Center text on mobile */
+    .nameTitle-content h1,
+    .nameTitle-content p,
+    .nameTitle-content h2,
+    section h2,
+    .skill-category,
+    .contact-links {
+        text-align: center;
+    }
+}
+
+/* Add styles for very small screens */
+@media screen and (max-width: 480px) {
+    .content {
+        padding-top: 60px;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    section {
+        padding: 1.5rem 0;
+    }
+
+    .nameTitle-content {
+        padding: 0.5rem;
     }
 }
