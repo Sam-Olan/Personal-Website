@@ -267,3 +267,74 @@ footer {
 .content {
     padding-top: 60px; /* Height of navbar */
 }
+
+/* Mobile Navigation Styles */
+.mobile-nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1000;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;  /* Changed to white to match navbar */
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-nav-toggle {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+
+    .nav-links {
+        position: fixed;
+        inset: 0 0 0 30%;
+        background: rgba(26, 26, 26, 0.95);  /* Match navbar color */
+        padding: min(30vh, 10rem) 2em;
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 999;  /* Below the toggle button */
+    }
+
+    .nav-links[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: left;
+    }
+
+    /* Hamburger Animation */
+    .mobile-nav-toggle[aria-expanded="true"] .hamburger span:first-child {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] .hamburger span:last-child {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}

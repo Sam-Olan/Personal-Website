@@ -6,16 +6,28 @@
     <title>Sam Olan - Portfolio</title>
     <link rel="stylesheet" href="personalSite.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-title">
-            <a href="home.html">Sam Olan</a>
+            <a href="index.html">Sam Olan</a>
         </div>
-        <div class="nav-links">
+        <button class="mobile-nav-toggle" 
+                aria-controls="nav-links" 
+                aria-expanded="false"
+                aria-label="Toggle navigation menu">
+            <span class="sr-only">Menu</span>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        <div class="nav-links" id="nav-links">
             <ul>
                 <li><a href="projectPortfolio.html">Projects</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="index.html#about">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
