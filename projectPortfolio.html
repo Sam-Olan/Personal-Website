@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Sam Olan - Projects</title>
     <link rel="stylesheet" href="personalSite.css">
+    <link rel="stylesheet" href="projectPortfolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -25,24 +26,11 @@
         <section id="projects">
             <h2>Projects</h2>
             <div class="project-grid">
-                <div class="project-card">
-                    <h3>Flight Map Project</h3>
+                <div class="project-card featured">
+                    <h3>Current Project</h3>
+                    <h4>Mobile Fitness App</h4>
                     <div class="project-image">
-                        <button class="carousel-btn prev-btn">&lt;</button>
-                        <div class="carousel-container">
-                        </div>
-                        <button class="carousel-btn next-btn">&gt;</button>
-                    </div>
-                    <p>This project is a console-based application that manages an airport route map. It allows a user to build and edit a route map consisting of airports and routes between them, and can find the shortest path between any two airports.</p>
-                    <div class="project-links">
-                        <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>Mobile Fitness App</h3>
-                    <div class="project-image">
-                        <button class="carousel-btn prev-btn">&lt;</button>
+                        <button class="carousel-btn prev-btn">&#10094;</button>
                         <div class="carousel-container">
                             <img src="Images/Workout App/IMG_0971.PNG" alt="Mobile App Screenshot 9" class="carousel-img active">
                             <img src="Images/Workout App/IMG_0963.PNG" alt="Mobile App Screenshot 1" class="carousel-img">
@@ -54,11 +42,27 @@
                             <img src="Images/Workout App/IMG_0969.PNG" alt="Mobile App Screenshot 7" class="carousel-img">
                             <img src="Images/Workout App/IMG_0972.PNG" alt="Mobile App Screenshot 10" class="carousel-img">
                         </div>
-                        <button class="carousel-btn next-btn">&gt;</button>
+                        <button class="carousel-btn next-btn">&#10095;</button>
                     </div>
                     <p>In Development Fitness App</p>
                     <div class="project-links">
                         <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+
+                <div class="regular-projects">
+                    <div class="project-card">
+                        <h3>Flight Map Project</h3>
+                        <div class="project-image">
+                            <button class="carousel-btn prev-btn">&#10094;</button>
+                            <div class="carousel-container">
+                            </div>
+                            <button class="carousel-btn next-btn">&#10095;</button>
+                        </div>
+                        <p>This project is a console-based application that manages an airport route map. It allows a user to build and edit a route map consisting of airports and routes between them, and can find the shortest path between any two airports.</p>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -68,73 +72,6 @@
     <footer>
         <p>&copy; 2024 Sam Olan. All rights reserved.</p>
     </footer>
-
-    <style>
-        .project-card {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .project-image {
-            position: relative;
-            width: 100%;
-            height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .carousel-container {
-            width: 80%;
-            height: 100%;
-            position: relative;
-            overflow: hidden;
-            margin: 0 auto;
-        }
-
-        .carousel-img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-        }
-
-        .carousel-img.active {
-            opacity: 1;
-        }
-
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            z-index: 1;
-            border-radius: 50%;
-            transition: background 0.3s;
-        }
-
-        .carousel-btn:hover {
-            background: rgba(0, 0, 0, 0.8);
-        }
-
-        .prev-btn {
-            left: 5%;
-        }
-
-        .next-btn {
-            right: 5%;
-        }
-    </style>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {

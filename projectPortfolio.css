@@ -1,0 +1,193 @@
+.project-card {
+    text-align: center;
+    padding: 20px;
+    min-height: 600px;  /* Set minimum height for consistency */
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;  /* Optional: adds visual separation */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Optional: adds depth */
+}
+
+.project-image {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-shrink: 0;  /* Prevents image from shrinking */
+}
+
+.carousel-container {
+    width: 90%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.carousel-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.carousel-img.active {
+    opacity: 1;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+    transition: all 0.3s;
+    opacity: 0;  /* Hide buttons by default */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.project-card:hover .carousel-btn {
+    opacity: 1;  /* Show buttons on hover */
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);  /* Slightly enlarge on hover */
+}
+
+.prev-btn {
+    left: 5%;
+}
+
+.next-btn {
+    right: 5%;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.project-card.featured {
+    grid-column: 1 / -1;
+    max-width: 1200px;  /* Reduced from 1400px */
+    width: 100%;
+    margin: 0 auto;
+    min-height: 800px;
+}
+
+/* For non-featured projects, create a grid */
+.project-grid .project-card:not(.featured) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;  /* Reduced from 1200px */
+    margin: 0 auto;
+}
+
+/* Adjust image height for featured project */
+.project-card.featured .project-image {
+    height: 500px;
+}
+
+.project-card h3, .project-card h4 {
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    flex-grow: 1;  /* Allows text area to grow but maintains card size */
+    margin: 1rem 0;
+}
+
+.project-links {
+    margin-top: auto;  /* Pushes links to bottom of card */
+    padding: 1rem 0;
+}
+
+/* Mobile Responsive Design */
+@media screen and (max-width: 768px) {
+    .project-card {
+        min-height: auto;  /* Allow height to be flexible on mobile */
+        padding: 15px;
+    }
+
+    .project-card.featured {
+        min-height: auto;
+    }
+
+    .project-image {
+        height: 300px;  /* Smaller height for mobile */
+    }
+
+    .project-card.featured .project-image {
+        height: 350px;  /* Slightly larger for featured, but still mobile-friendly */
+    }
+
+    .carousel-container {
+        width: 100%;  /* Full width on mobile */
+    }
+
+    .carousel-btn {
+        padding: 8px 12px;  /* Smaller buttons on mobile */
+        font-size: 14px;
+    }
+
+    .prev-btn {
+        left: 2%;
+    }
+
+    .next-btn {
+        right: 2%;
+    }
+
+    /* Adjust text sizes for mobile */
+    .project-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .project-card h4 {
+        font-size: 1.2rem;
+    }
+
+    .project-card p {
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
+    }
+}
+
+/* For very small screens */
+@media screen and (max-width: 480px) {
+    .project-grid {
+        width: 95%;  /* Use more screen width on very small devices */
+    }
+
+    .project-image {
+        height: 250px;  /* Even smaller height for very small screens */
+    }
+
+    .project-card.featured .project-image {
+        height: 300px;
+    }
+
+    .carousel-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+} 
