@@ -10,6 +10,12 @@
     border-radius: 8px;
 }
 
+/* Remove any hover transitions */
+.project-card:hover {
+    transform: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 /* Card Typography */
 .project-card h3, 
 .project-card h4 {
@@ -270,4 +276,18 @@
 .project-list li a:hover {
     color: #0056b3;  /* Darker blue on hover */
     text-decoration: underline;  /* Optional: adds underline on hover */
+}
+
+/* Regular Projects Spacing */
+.regular-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;  /* Increased spacing between cards */
+}
+
+/* For mobile screens */
+@media screen and (max-width: 768px) {
+    .regular-projects {
+        gap: 2rem;  /* Slightly less spacing on mobile */
+    }
 } 
