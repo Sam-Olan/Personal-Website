@@ -239,4 +239,35 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+
+/* Project List */
+.project-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem auto;  /* Increased margin */
+    text-align: center;
+    max-width: 80%;
+}
+
+.project-list li {
+    margin-bottom: 1.2rem;  /* Increased spacing between items */
+    color: #333;
+}
+
+/* Remove the bullet points */
+.project-list li::before {
+    display: none;
+}
+
+.project-list li a {
+    text-decoration: none;
+    color: #007bff;  /* Blue color to indicate clickable */
+    font-size: 1.1rem;  /* Larger text */
+    transition: color 0.3s;
+}
+
+.project-list li a:hover {
+    color: #0056b3;  /* Darker blue on hover */
+    text-decoration: underline;  /* Optional: adds underline on hover */
 } 
