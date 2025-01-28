@@ -451,3 +451,31 @@ main {
     grid-template-columns: 1fr;  /* Single column */
     max-width: 200px;  /* Narrower width since it's single column */
 }
+
+/* About section */
+#about p {
+    max-width: 800px;  /* Limit the width of the text */
+    margin: 0 auto;    /* Center the text block */
+    text-align: center;
+    line-height: 1.8;  /* Slightly increase line height for better readability */
+    font-size: 1.1rem; /* Optional: adjust font size */
+}
+
+#about p a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#about p a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* For mobile screens */
+@media screen and (max-width: 768px) {
+    #about p {
+        max-width: 95%;  /* Use more width on mobile */
+        padding: 0 1rem;
+    }
+}
