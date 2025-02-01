@@ -458,6 +458,30 @@ main {
     max-width: 200px;  /* Narrower width since it's single column */
 }
 
+/* Tool list styling */
+.skill-category:nth-child(2) ul li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.tool-name {
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.tool-description {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Update the existing tools list style */
+.skill-category:nth-child(2) ul {
+    grid-template-columns: 1fr;
+    max-width: 300px;  /* Increased from 200px to accommodate longer descriptions */
+}
+
 /* About section */
 #about p {
     max-width: 800px;  /* Limit the width of the text */
