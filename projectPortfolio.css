@@ -301,4 +301,25 @@
     .regular-projects {
         gap: 2rem;  /* Slightly less spacing on mobile */
     }
+}
+
+/* Project link styles */
+.project-list a,
+.project-list a:visited {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.project-list a:hover {
+    color: #007bff;
+}
+
+.project-links a,
+.project-links a:visited {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.project-links a:hover {
+    color: #007bff;
 } 
