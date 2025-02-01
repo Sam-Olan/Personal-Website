@@ -516,3 +516,63 @@ main {
     outline: 2px solid #007bff;
     outline-offset: 2px;
 }
+
+/* Contact page specific styles */
+.contact-section {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-container {
+    text-align: center;
+    padding: 2rem;
+    margin-top: -60px;
+}
+
+.contact-container h2 {
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.contact-section .contact-links {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.contact-section .contact-links a {
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    min-width: 180px;
+}
+
+.contact-section .contact-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Mobile responsive adjustments */
+@media screen and (max-width: 768px) {
+    .contact-container {
+        margin-top: 0;
+        padding: 1rem;
+    }
+
+    .contact-section .contact-links {
+        flex-direction: column;
+    }
+
+    .contact-section .contact-links a {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
+    }
+}

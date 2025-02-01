@@ -7,46 +7,24 @@
     <title>Sam Olan - Contact</title>
     <link rel="stylesheet" href="personalSite.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <script src="js/components.js" defer></script>
     <script src="js/main.js" defer></script>
 </head>
 <body>
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <div class="nav-title">
-            <a href="index.html">Sam Olan</a>
-        </div>
-        <button class="mobile-nav-toggle" 
-                aria-controls="nav-links" 
-                aria-expanded="false"
-                aria-label="Toggle navigation menu">
-            <span class="sr-only">Menu</span>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </button>
-        <div class="nav-links" id="nav-links">
-            <ul>
-                <li><a href="projectPortfolio.html">Projects</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div id="navbar-container"></div>
     
     <main class="content">
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <div class="contact-links">
-                <a href="mailto:samdavidolan@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-                <a href="https://www.linkedin.com/in/sam-olan-36895b336/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/Sam-Olan" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <section id="contact" class="contact-section">
+            <div class="contact-container">
+                <h2>Contact Me</h2>
+                <div class="contact-links">
+                    <a href="mailto:samdavidolan@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://www.linkedin.com/in/sam-olan-36895b336/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/Sam-Olan" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                </div>
             </div>
         </section>
     </main>
-
-    <footer>
-        <p>Sam Olan</p>
-    </footer>
 </body>
 </html>
