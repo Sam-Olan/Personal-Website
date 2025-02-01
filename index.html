@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="Sam Olan's personal portfolio website showcasing software development projects and skills">
     <title>Sam Olan - Portfolio</title>
     <link rel="stylesheet" href="personalSite.css?v=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?v=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="js/main.js?v=1.0" defer></script>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 </head>
 <body>
     <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -34,23 +37,23 @@
     </nav>
     
     <main class="content">
-        <section id="nameTitle">
+        <section id="nameTitle" role="banner" aria-labelledby="name-heading">
             <div class="nameTitle-content">
-                <h1>Sam Olan</h1>
+                <h1 id="name-heading">Sam Olan</h1>
                 <p>Computer Science Student | Software Developer | Artist</p>
             </div>
         </section>
         
         <section id="about">
             <h2>About Me</h2>
-            <p>I am a final-year Computer Science student, aspiring software developer and artist, intending to complete my coursework by February 2025. My <a href="projectPortfolio.html">project portfolio</a> highlights key projects I have worked on both individually and as part of a team. <br><br>With my mother being an artist, I grew up surrounded by art and have developed a strong eye for design. Through an elective computer science course during my first year of university, I discovered the creative liberties of software development and realized that my passion for design could be applied to technological projects. This realization led me to change majors from Environmental Science to Computer Science.br <br><br>I have since worked diligently, developing a strong understanding of foundational computer science concepts and excellent software development skills. Importantly, I am driven to learn and further my professional development as part of a passionate team.</p>
+            <p>I am a final-year Computer Science student, aspiring software developer and artist, intending to complete my coursework by February 2025. My <a href="projectPortfolio.html">project portfolio</a> highlights key projects I have worked on both individually and as part of a team. <br><br>With my mother being an artist, I grew up surrounded by art and have developed a strong eye for design. Through an elective computer science course during my first year of university, I discovered the creative liberties of software development and realized that my passion for design could be applied to technological projects. This realization led me to change majors from Environmental Science to Computer Science. <br><br>I have since worked diligently, developing a strong understanding of foundational computer science concepts and excellent software development skills. Importantly, I am driven to learn and further my professional development as part of a passionate team.</p>
         </section>
 
-        <section id="skills">
-            <h2>Technical Skills</h2>
+        <section id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Technical Skills</h2>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Languages</h3>
+                <div class="skill-category" role="group" aria-labelledby="languages-heading">
+                    <h3 id="languages-heading">Languages</h3>
                     <ul>
                         <li>Python</li>
                         <li>Java</li>
@@ -66,8 +69,8 @@
                         <li>More</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3>Tools</h3>
+                <div class="skill-category" role="group" aria-labelledby="tools-heading">
+                    <h3 id="tools-heading">Tools</h3>
                     <ul>
                         <li>Git</li>
                         <li>MySQL</li>                    

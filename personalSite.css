@@ -310,6 +310,12 @@ footer {
     color: #007bff;
 }
 
+.nav-links ul li a:focus {
+    color: #007bff;
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
 .content {
     padding-top: 60px; /* Height of navbar */
 }
@@ -478,4 +484,11 @@ main {
         max-width: 95%;  /* Use more width on mobile */
         padding: 0 1rem;
     }
+}
+
+.project-links a:focus,
+.contact-links a:focus,
+.footer-links a:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
 }
